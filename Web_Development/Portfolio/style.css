@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* Header Part */
+#home {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./Assets/1000018482.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8% 0 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span {
+    color: red;
+    animation: colorChange 4s infinite ease-in 0ms forwards;
+}
+
+@keyframes colorChange {
+
+    0%,
+    100% {
+        color: red;
+    }
+
+    25% {
+        color: white;
+    }
+
+    50% {
+        color: red;
+    }
+
+    75% {
+        color: white;
+    }
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: .4s;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 22px;
+    font-weight: bolder;
+    padding: 10px 25px;
+    transition: .4s;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: lightcoral;
+}
+
+
+
+/* Home Page Section */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+h1,
+h3,
+h4 {
+    color: white;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+hr {
+    margin: 12px;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    padding: 20px 8%;
+    background-color: #000;
+    animation: scrollAnimation linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+@keyframes scrollAnimation {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.user-mail form {
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+
+.user-mail form input {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 13px 14px 15px;
+    border: 2px solid black;
+    font-size: 15px;
+    font-weight: bold;
+    outline: none;
+    border-radius: 30px;
+}
+
+.user-mail form button {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: #f9004d;
+    color: white;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+}
+
+
+
+/* About Me Section */
+#about-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+}
+
+#about-section #my-img {
+    width: 35%;
+    height: 75%;
+    border: 5.5px solid;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    overflow: hidden;
+    animation: spinner 2s infinite ease-in 0ms forwards;
+    transition: all .3s ease-in;
+}
+
+#about-section #my-img img {
+    width: 100%;
+    transform: translateX(-30px) translateY(-150px) scale(1.6);
+}
+
+#about-section #my-img:hover {
+    scale: 1.1;
+    filter: brightness(1) contrast(1.2);
+}
+
+@keyframes spinner {
+
+    0%,
+    100% {
+        box-shadow: 2px 2px 10px red;
+    }
+
+    50% {
+        box-shadow: -2px -2px 10px red;
+    }
+}
+
+
+#about-section #text {
+    width: 45%;
+    height: 75%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#about-section #text p,
+details {
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 1.6px;
+}
+
+summary {
+    cursor: pointer;
+}
+
+
+
+/* Languages Learned Section */
+#languages-learned {
+    padding: 0px 8%;
+}
+
+section h2 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 12px;
+    ;
+    text-align: center;
+    font-style: italic;
+}
+
+.language {
+    color: white;
+    padding: 3vh 0px;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.language .outerbox {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.outerbox div {
+    text-align: center;
+    width: 16vw;
+    height: 25vh;
+    padding: 12px 0px;
+    box-shadow: 4px 4px 8px -1px lightcoral, inset 4px 4px 8px -1px #f9004d;
+    border-radius: 22px;
+    transition: transform .3s ease-in;
+}
+
+.outerbox div p {
+    margin: 8px;
+}
+
+.outerbox div progress {
+    height: 30px;
+}
+
+.outerbox div:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Certificate Section */
+#certificates {
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+    box-shadow: 0 0 10px grey;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+
+.slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity) / 4);
+    position: relative;
+}
+
+.slider .list .item {
+    width: 500px;
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: imageAnimation 10s linear infinite;
+    animation-delay: calc((9s / var(--quantity)) * (var(--position) - 1));
+}
+
+.slider .list .item img {
+    height: var(--height);
+    width: var(--width);
+    width: 100%;
+}
+
+@keyframes imageAnimation {
+    form {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.slider:hover .item {
+    animation-play-state: paused !important;
+    filter: blur(10px) brightness(0.4);
+}
+
+.slider .item:hover {
+    filter: blur(0) brightness(1);
+}
+
+
+
+/* Contact Section */
+
+#contact div {
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#contact form {
+    width: 55%;
+    height: 100%;
+}
+
+#contact form legend {
+    margin: 10px;
+    color: #f9004d;
+    font-size: 1.4rem;
+}
+
+#contact form fieldset {
+    margin: 8px;
+    border-color: #fa6d86;
+    width: 75%;
+}
+
+#contact form fieldset input {
+    color: white;
+    width: 100%;
+    padding: 5px 8px;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset -2px -2px 5px #dbf7fbda, inset 2px 2px 5px #dbf7fbda;
+}
+
+#submit-button button {
+    padding: 8px 8px;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    border: none;
+    border-radius: 22px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform .3s ease-in;
+    cursor: pointer;
+}
+
+#submit-button {
+    display: flex;
+    justify-content: flex-end;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    border: none;
+}
+
+#submit-button button:hover {
+    transform: translateZ(130px) translateX(-30px);
+    box-shadow: 0px 0px 8px #fa6d86;
+}
+
+.socialLogos {
+    width: 45%;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLogos div a {
+    display: flex;
+    gap: 1rem;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.socialLogos div a:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 4px 8px #fa6d86;
+}
