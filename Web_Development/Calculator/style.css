@@ -31,21 +31,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 60px;
     gap: 1rem;
+    border: 1px solid var(--tertiary-color);
     border-radius: 20px;
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    box-shadow: inset -8px -8px 12px var(--primary-color),
-                 0px 0px 12px var(--tertiary-color);
-    animation: shadowAnimation 2s forwards infinite ease-in;
-}
-@keyframes shadowAnimation {
-    0%, 100% {
-        box-shadow: -8px -8px 12px var(--primary-color);
-    }
-    50% {
-        box-shadow: 8px 8px 12px var(--primary-color);
-    }
+    box-shadow: 20px 20px 20px var(--primary-color), -0px -0px 10px rgba(255, 166, 0, 0.87);
 }
 
 #display {
